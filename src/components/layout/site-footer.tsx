@@ -8,13 +8,15 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Image
-              src="/brand/ar-webcrafts-logo.png"
-              alt="AR WebCrafts"
-              width={140}
-              height={34}
-              className="h-8 w-auto brightness-0 invert"
-            />
+            <div className="inline-flex rounded-lg bg-white px-3 py-2">
+              <Image
+                src="/brand/ar-webcrafts-logo.png"
+                alt="AR WebCrafts"
+                width={140}
+                height={34}
+                className="h-7 w-auto"
+              />
+            </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
               US-registered LLC with an in-house senior team. WordPress plugins,
               WooCommerce, business websites and custom SaaS — 8+ years, 30+

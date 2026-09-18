@@ -37,7 +37,7 @@ export function SiteHeader() {
 
         <div className="hidden md:block">
           <CtaLink href="/contact" variant="primary" className="px-5 py-2.5 text-[13px]">
-            Book a free call
+            Hire Us
           </CtaLink>
         </div>
 
@@ -73,7 +73,7 @@ export function SiteHeader() {
             ))}
           </nav>
           <CtaLink href="/contact" variant="primary" className="mt-4 w-full">
-            Book a free call
+            Hire Us
           </CtaLink>
         </div>
       )}

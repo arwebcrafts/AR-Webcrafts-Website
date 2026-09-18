@@ -14,7 +14,7 @@ export function Services() {
           <Link
             key={service.href}
             href={service.href}
-            className="group flex h-full flex-col gap-3 rounded-2xl border border-border bg-card p-7 transition-colors hover:border-brand-gold/60"
+            className="group flex h-full flex-col gap-3 rounded-2xl border border-border bg-card p-7 transition-all duration-200 hover:-translate-y-1 hover:border-brand-gold/60 hover:shadow-[0_12px_30px_-14px_rgba(1,27,57,0.25)] motion-reduce:hover:translate-y-0"
           >
             <h3 className="font-heading text-lg font-semibold text-foreground">
               {service.title}
@@ -24,7 +24,14 @@ export function Services() {
             </p>
             <span className="mt-auto flex items-center gap-1.5 pt-2 text-sm font-semibold text-brand-navy">
               Learn more
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                aria-hidden="true"
+                className="transition-transform duration-200 group-hover:translate-x-1"
+              >
                 <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
