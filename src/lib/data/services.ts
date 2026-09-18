@@ -53,7 +53,7 @@ export const howWeWorkSteps = [
 export const whyUsPoints = [
   {
     title: "In-house seniors only",
-    description: "6 senior developers, no juniors, no outsourcing to freelancers.",
+    description: "Senior developers only — no juniors, no outsourcing to freelancers.",
   },
   {
     title: "Direct contact with developers",

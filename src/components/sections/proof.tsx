@@ -1,20 +1,17 @@
 import { portfolioProjects } from "@/lib/data/portfolio";
-import { Reveal } from "@/components/motion/reveal";
 
 const featuredProjects = portfolioProjects.filter((p) => p.featured);
 
 export function Proof() {
   return (
-    <section id="proof" className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
-      <Reveal>
+    <section id="proof" className="bg-brand-cream py-20">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-gold">Proof, not promises</p>
         <h2 className="mt-2 font-heading text-3xl font-bold text-foreground sm:text-4xl">
           The work that speaks for itself
         </h2>
-      </Reveal>
 
-      {/* WebinarIgnition — flagship case study */}
-      <Reveal delay={0.05}>
+        {/* WebinarIgnition — flagship case study */}
         <div className="mt-10 grid gap-8 rounded-3xl border border-border bg-card p-8 sm:grid-cols-[1.1fr_1fr] sm:p-10">
           <div className="flex flex-col gap-4">
             <span className="inline-flex w-fit items-center rounded-full bg-brand-gold-tint px-3 py-1 text-xs font-semibold text-brand-navy">
@@ -51,30 +48,26 @@ export function Proof() {
             </div>
           </dl>
         </div>
-      </Reveal>
 
-      {/* Website projects */}
-      <div className="mt-6 grid gap-5 sm:grid-cols-3">
-        {featuredProjects.map((project, i) => (
-          <Reveal key={project.name} delay={i * 0.05}>
-            <div className="flex h-full flex-col gap-2 rounded-2xl border border-border bg-card p-6">
+        {/* Website projects */}
+        <div className="mt-6 grid gap-5 sm:grid-cols-3">
+          {featuredProjects.map((project) => (
+            <div key={project.name} className="flex h-full flex-col gap-2 rounded-2xl border border-border bg-card p-6">
               <span className="text-xs font-semibold uppercase tracking-wide text-brand-gold">{project.type}</span>
               <h4 className="font-heading text-base font-semibold text-foreground">{project.name}</h4>
               <p className="text-sm leading-relaxed text-muted-foreground">{project.summary}</p>
             </div>
-          </Reveal>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* SaaS case studies — pending client-supplied names/screenshots */}
-      <Reveal delay={0.1}>
+        {/* SaaS case studies — pending client-supplied names/screenshots */}
         <div className="mt-10">
           <p className="text-sm font-semibold text-foreground">SaaS builds</p>
           <div className="mt-4 grid gap-5 sm:grid-cols-3">
             {[1, 2, 3].map((n) => (
               <div
                 key={n}
-                className="flex h-full min-h-[140px] flex-col items-start justify-between gap-2 rounded-2xl border border-dashed border-border bg-secondary/40 p-6"
+                className="flex h-full min-h-[140px] flex-col items-start justify-between gap-2 rounded-2xl border border-dashed border-border bg-white/60 p-6"
               >
                 <span className="rounded-full bg-white px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
                   TODO
@@ -86,7 +79,7 @@ export function Proof() {
             ))}
           </div>
         </div>
-      </Reveal>
+      </div>
     </section>
   );
 }

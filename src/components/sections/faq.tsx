@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Reveal } from "@/components/motion/reveal";
 import { cn } from "@/lib/utils";
 
 export function Faq({
@@ -15,10 +14,8 @@ export function Faq({
 
   return (
     <section className="mx-auto max-w-3xl px-5 py-20 sm:px-8">
-      <Reveal>
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-gold">FAQ</p>
-        <h2 className="mt-2 font-heading text-3xl font-bold text-foreground sm:text-4xl">{title}</h2>
-      </Reveal>
+      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-gold">FAQ</p>
+      <h2 className="mt-2 font-heading text-3xl font-bold text-foreground sm:text-4xl">{title}</h2>
 
       <div className="mt-8 flex flex-col divide-y divide-border rounded-2xl border border-border">
         {items.map((faqItem, i) => {
